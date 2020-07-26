@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppSurveyStateService } from './core/services/survey-state.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AwesomeSurveys';
+
+  constructor(public state: AppSurveyStateService) {
+
+  }
 }

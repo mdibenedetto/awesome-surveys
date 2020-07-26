@@ -1,0 +1,70 @@
+{
+  "id": 2,
+  "title": "Survey 2",
+  "questions": [
+    {
+      "id": 1,
+      "type": "free_text",
+      "title": "",
+      "description": "",
+      "options": [
+        {
+          "value": "Default Free text option",
+          "label": "Free text option"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "type": "yes_no",
+      "title": "",
+      "description": "",
+      "options": [
+        {
+          "value": "yes",
+          "label": "Yes/No option"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "type": "single_selection",
+      "title": "",
+      "description": "",
+      "options": [
+        {
+          "value": "1",
+          "label": "Single Option 1"
+        },
+        {
+          "value": "2",
+          "label": "Single Option 2"
+        },
+        {
+          "value": "3",
+          "label": "Single Option 3"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "type": "multiple_selection",
+      "title": "",
+      "description": "",
+      "options": [
+        {
+          "value": "1",
+          "label": "Multiple Option 1"
+        },
+        {
+          "value": "2",
+          "label": "Multiple Option 2"
+        },
+        {
+          "value": "3",
+          "label": "Multiple Option 3"
+        }
+      ]
+    }
+  ]
+}

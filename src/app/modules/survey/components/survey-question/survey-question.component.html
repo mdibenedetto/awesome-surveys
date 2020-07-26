@@ -1,0 +1,32 @@
+<section class="question">
+  <header class="question-header">
+    <h2 class="title">
+      {{ question.title }}
+    </h2>
+    <p class="desc">
+      {{ question.description }}
+    </p>
+  </header>
+
+  <section class="question-body">
+    <section class="content">
+      <app-survey-question-free-text
+        *ngIf="question.type == 'free_text'"
+        [question]="question"
+      ></app-survey-question-free-text>
+
+      <app-survey-question-choice
+        *ngIf="
+          ['yes_no', 'single_selection', 'multiple_selection'].includes(
+            question.type
+          )
+        "
+        [question]="question"
+        [inputType]="parseInputType(question.type)"
+      ></app-survey-question-choice>
+    </section>
+  </section>
+  <footer class="footer">
+    <button (click)="saveAnswer()">Ok</button>
+  </footer>
+</section>

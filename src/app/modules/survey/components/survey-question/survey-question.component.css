@@ -1,0 +1,42 @@
+:host {
+  --padding-container: 10px;
+}
+
+.question {
+  border: 1px solid;
+  margin: 10px;
+  padding-top: 0;
+  width: 400px;
+}
+
+.question-header > * {
+  padding: var(--padding-container);
+}
+
+.title {
+  background-color: #1976d2;
+  color: white;
+}
+
+.desc {
+  background-color: white;
+}
+
+.question-body {
+  padding: var(--padding-container);
+  min-height: 100px;
+  background-color: lightgray;
+}
+
+.content {
+  background-color: lightgoldenrodyellow;
+}
+
+.option {
+}
+
+.footer {
+  padding: var(--padding-container);
+  display: flex;
+  justify-content: flex-end;
+}
