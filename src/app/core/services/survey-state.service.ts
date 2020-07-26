@@ -3,22 +3,31 @@ import { Injectable } from '@angular/core';
 import { Answer } from '..';
 import { SurveyState } from '../model/survery';
 
+
 @Injectable({ providedIn: 'root' })
 export class AppSurveyStateService {
 
 
     surveyState: SurveyState;
 
-    answerQuestion(questionId: number, questionAnswer: string): void {
-        alert("answerQuestion")
+    constructor() {
+        this.surveyState = {} as SurveyState;
+        this.surveyState.answers = [] as Answer[];
+    }
+
+    saveAnswer(answer: Answer): void {
+        debugger
+        console.log("saveAnswer")
+
+
         this.surveyState.answers = [
-            ...this.surveyState.answers,
-            { questionId, questionAnswer }
+            ...this.surveyState.answers.filter(ans => ans.questionId != answer.questionId),
+            answer
         ];
     }
 
     completeSurvey(): void {
-        alert("completeSurvey")
+        console.log("completeSurvey")
         this.surveyState = { ...this.surveyState, isCompleted: true }
     }
 

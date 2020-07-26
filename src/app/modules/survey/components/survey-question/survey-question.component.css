@@ -33,6 +33,8 @@
 }
 
 .option {
+  margin-bottom: 5px;
+  display: flex;
 }
 
 .footer {

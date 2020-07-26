@@ -4,7 +4,7 @@
   "questions": [
     {
       "id": 1,
-      "type": "free_text",
+      "type": "free-text",
       "title": "",
       "description": "",
       "options": [
@@ -16,7 +16,7 @@
     },
     {
       "id": 1,
-      "type": "yes_no",
+      "type": "yes-no",
       "title": "",
       "description": "",
       "options": [
@@ -28,7 +28,7 @@
     },
     {
       "id": 1,
-      "type": "single_selection",
+      "type": "single-choice",
       "title": "",
       "description": "",
       "options": [
@@ -48,7 +48,7 @@
     },
     {
       "id": 1,
-      "type": "multiple_selection",
+      "type": "multi-choice",
       "title": "",
       "description": "",
       "options": [

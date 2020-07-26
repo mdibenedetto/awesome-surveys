@@ -4,9 +4,9 @@
   "questions": [
     {
       "id": 1,
-      "type": "free_text",
-      "title": "Dummy Title  free_text",
-      "description": "DummyDummy Description free_text",
+      "type": "free-text",
+      "title": "Dummy Title  free-text",
+      "description": "DummyDummy Description free-text",
       "options": [
         {
           "value": "Default Free text option",
@@ -16,9 +16,9 @@
     },
     {
       "id": 2,
-      "type": "yes_no",
-      "title": "Dummy Title  yes_no",
-      "description": "Dummy Description yes_no",
+      "type": "yes-no",
+      "title": "Dummy Title  yes-no",
+      "description": "Dummy Description yes-no",
       "options": [
         {
           "value": "yes",
@@ -28,9 +28,9 @@
     },
     {
       "id": 3,
-      "type": "single_selection",
-      "title": "Dummy Title  single_selection",
-      "description": "Dummy Description single_selection",
+      "type": "single-choice",
+      "title": "Dummy Title  single-choice",
+      "description": "Dummy Description single-choice",
       "options": [
         {
           "value": "1",
@@ -48,9 +48,9 @@
     },
     {
       "id": 4,
-      "type": "multiple_selection",
-      "title": "Dummy Title  multiple_selection",
-      "description": "Dummy Description multiple_selection",
+      "type": "multi-choice",
+      "title": "Dummy Title  multi-choice",
+      "description": "Dummy Description multi-choice",
       "options": [
         {
           "value": "1",

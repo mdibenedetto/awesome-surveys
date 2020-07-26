@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { SurveyService, Survey } from 'src/app/core';
+import { SurveyService, Survey, Answer } from 'src/app/core';
 import { Observable } from 'rxjs';
 import { AppSurveyStateService } from 'src/app/core/services/survey-state.service';
 
@@ -19,6 +19,11 @@ export class SurveyFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.survey = this.surveyService.findSurvey(this.surveyId);
+  }
+
+  saveAnswer(answer: Answer): void {
+    debugger
+    this.state.saveAnswer(answer);
   }
 
   completeSurvey(event): void {

@@ -1,30 +1,31 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Question } from 'src/app/core';
+import { AppSurveyStateService } from 'src/app/core/services/survey-state.service';
 
 @Component({
   selector: 'app-survey-question',
   templateUrl: './survey-question.component.html',
   styleUrls: ['./survey-question.component.css']
 })
-export class SurveyQuestionComponent implements OnInit {
+export class SurveyQuestionComponent {
 
   @Input() question: Question;
+  @Output() saveAnswer: EventEmitter<any> = new EventEmitter();
 
-  constructor() { }
+  value: object;
 
-  ngOnInit(): void {
-  }
+  save(e): void {
+    e.preventDefault();
 
-  saveAnswer(): void {
-
-  }
-
-  parseInputType(questionType: string): string {
-    if (questionType == 'single_selection') {
-      return "radio";
+    const answer = {
+      questionId: this.question.id,
+      questionAnswer: this.value
     }
-    else if (questionType == 'multiple_selection' || questionType == 'yes_no') {
-      return "checkbox";
-    }
+    this.saveAnswer.emit(answer);
   }
+
+  valueChanged(value: object): void {
+    this.value = value;
+  }
+
 }

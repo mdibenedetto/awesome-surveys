@@ -1,7 +1,6 @@
 <main style="display: flex; flex-direction: row-reverse;">
-  <pre>
-    {{ state | json }}
-  </pre>
+  <app-survey-summary></app-survey-summary>
+
   <form *ngIf="survey | async as survey">
     <header>
       <h1>
@@ -12,6 +11,7 @@
     <app-survey-question
       *ngFor="let question of survey.questions"
       [question]="question"
+      (saveAnswer)="saveAnswer($event)"
     ></app-survey-question>
 
     <button (click)="completeSurvey($event)">Complete</button>

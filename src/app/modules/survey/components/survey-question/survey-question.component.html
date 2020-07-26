@@ -11,22 +11,31 @@
   <section class="question-body">
     <section class="content">
       <app-survey-question-free-text
-        *ngIf="question.type == 'free_text'"
+        *ngIf="question.type == 'free-text'"
         [question]="question"
+        (valueChanged)="valueChanged($event)"
       ></app-survey-question-free-text>
 
-      <app-survey-question-choice
-        *ngIf="
-          ['yes_no', 'single_selection', 'multiple_selection'].includes(
-            question.type
-          )
-        "
+      <app-survey-question-yes-no
+        *ngIf="question.type == 'yes-no'"
         [question]="question"
-        [inputType]="parseInputType(question.type)"
-      ></app-survey-question-choice>
+        (valueChanged)="valueChanged($event)"
+      ></app-survey-question-yes-no>
+
+      <app-multi-choice-question
+        *ngIf="question.type == 'multi-choice'"
+        [question]="question"
+        (valueChanged)="valueChanged($event)"
+      ></app-multi-choice-question>
+
+      <app-single-choice-question
+        *ngIf="question.type == 'single-choice'"
+        [question]="question"
+        (valueChanged)="valueChanged($event)"
+      ></app-single-choice-question>
     </section>
   </section>
   <footer class="footer">
-    <button (click)="saveAnswer()">Ok</button>
+    <button (click)="save($event)">Save</button>
   </footer>
 </section>
