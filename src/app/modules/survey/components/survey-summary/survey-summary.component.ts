@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppSurveyStateService } from 'src/app/core/services/survey-state.service';
+import { SurveyService } from 'src/app/core';
 
 @Component({
   selector: 'app-survey-summary',
@@ -11,7 +12,10 @@ import { AppSurveyStateService } from 'src/app/core/services/survey-state.servic
 })
 export class SurveySummaryComponent {
 
-  constructor(public state: AppSurveyStateService) {
+  constructor(
+    public state: AppSurveyStateService,
+    public survey: SurveyService
+  ) {
 
 
   }

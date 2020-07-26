@@ -24,5 +24,6 @@ export interface SurveyState {
 }
 export interface Answer {
     questionId: number,
-    questionAnswer: string
+    questionAnswer: object,
+    question: Question
 }

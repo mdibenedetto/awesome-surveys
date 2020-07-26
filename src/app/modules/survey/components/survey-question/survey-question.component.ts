@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Question } from 'src/app/core';
+import { Question, Answer } from 'src/app/core';
 import { AppSurveyStateService } from 'src/app/core/services/survey-state.service';
 
 @Component({
@@ -10,17 +10,19 @@ import { AppSurveyStateService } from 'src/app/core/services/survey-state.servic
 export class SurveyQuestionComponent {
 
   @Input() question: Question;
-  @Output() saveAnswer: EventEmitter<any> = new EventEmitter();
+  @Output() saveAnswer: EventEmitter<Answer> = new EventEmitter();
 
   value: object;
 
   save(e): void {
     e.preventDefault();
 
-    const answer = {
+    const answer: Answer = {
       questionId: this.question.id,
-      questionAnswer: this.value
-    }
+      questionAnswer: this.value,
+      question: this.question
+    };
+
     this.saveAnswer.emit(answer);
   }
 
