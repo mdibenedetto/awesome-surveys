@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Question, Answer, AnswerValue } from 'src/app/core';
-import { AppSurveyStateService } from 'src/app/core/services/survey-state.service';
+import { AppSurveyStoreService } from 'src/app/core/services/survey-store.service';
 
 @Component({
   selector: 'app-survey-question',

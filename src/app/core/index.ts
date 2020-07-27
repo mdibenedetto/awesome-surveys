@@ -1,8 +1,8 @@
-import { Survey, Question, Option, Answer, SurveyState, AnswerValue } from "./model/survery";
+import { Survey, Question, Option, Answer, SurveyState, AnswerValue, QuestionType } from "./model/survery";
 import { SurveyService } from "./services/surveys.service";
-import { AppSurveyStateService } from "./services/survey-state.service";
+import { AppSurveyStoreService } from "./services/survey-store.service";
 
 export {
-    Survey, Question, Option, Answer, AnswerValue,
-    SurveyService, AppSurveyStateService, SurveyState
+    Survey, Question, Option, Answer, AnswerValue, QuestionType,
+    SurveyService, AppSurveyStoreService as AppSurveyStateService, SurveyState
 }

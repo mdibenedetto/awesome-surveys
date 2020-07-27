@@ -1,6 +1,4 @@
 <section class="survey-form card-page">
-  <app-survey-summary></app-survey-summary>
-
   <form *ngIf="survey | async as survey">
     <header>
       <h1>
@@ -14,6 +12,11 @@
       (saveAnswer)="saveAnswer($event)"
     ></app-survey-question>
 
-    <button (click)="completeSurvey($event)">Complete</button>
+    <button
+      (click)="completeSurvey($event)"
+      [disabled]="!isSurveryFilled(survey)"
+    >
+      Complete
+    </button>
   </form>
 </section>

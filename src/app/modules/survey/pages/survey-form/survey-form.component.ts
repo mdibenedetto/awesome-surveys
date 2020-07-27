@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -16,6 +16,7 @@ import {
 export class SurveyFormComponent implements OnInit {
 
   survey: Observable<Survey>;
+  totalQuestion: number;
 
   constructor(
     public state: AppSurveyStateService,
@@ -27,6 +28,14 @@ export class SurveyFormComponent implements OnInit {
   ngOnInit(): void {
     const surveyId: number = this.route.snapshot.params.id;
     this.survey = this.surveyService.findSurvey(surveyId);
+  }
+
+
+  isSurveryFilled(survey: Survey): boolean {
+    if (this.state.surveyState.answers.length == survey.questions.length) {
+      return true;
+    }
+    return false;
   }
 
   saveAnswer(answer: Answer): void {

@@ -1,19 +1,19 @@
 
 import { Injectable } from '@angular/core';
 
-import { SurveyState, Answer } from 'src/app/core';
+import { SurveyState as AppSurveyState, Answer } from 'src/app/core';
 import { mockState } from '../model/mock-state';
 
 
 @Injectable({ providedIn: 'root' })
-export class AppSurveyStateService {
+export class AppSurveyStoreService {
 
-    surveyState: SurveyState;
+    surveyState: AppSurveyState;
 
     constructor() {
-        this.surveyState = { ...mockState } as SurveyState;
-
-        this.surveyState.answers = [] as Answer[];
+        this.surveyState = {
+            answers: [] as Answer[]
+        } as AppSurveyState;
     }
 
     saveAnswer(answer: Answer): void {

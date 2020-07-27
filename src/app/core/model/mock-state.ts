@@ -35,7 +35,7 @@ export const mockState = {
         },
         {
             "questionId": 3,
-            "questionAnswer": "3",
+            "questionAnswer": "2",
             "question": {
                 "id": 3,
                 "type": "single-choice",
@@ -60,8 +60,8 @@ export const mockState = {
         {
             "questionId": 4,
             "questionAnswer": [
-                "3",
-                "1"
+                "2",
+                "3"
             ],
             "question": {
                 "id": 4,

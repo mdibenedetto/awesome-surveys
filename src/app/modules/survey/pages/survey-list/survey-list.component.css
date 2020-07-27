@@ -1,7 +1,4 @@
 .card-container {
-  /* display: flex;
-  flex-wrap: wrap; */
-
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1em;
@@ -14,7 +11,7 @@
   border-radius: 5px;
 
   max-width: 200px;
-  max-height: 100px;
+  max-height: 150px;
   overflow: hidden;
   cursor: pointer;
 }
@@ -26,13 +23,17 @@
 
 .card .card-title {
   margin-bottom: 5px;
+  color: #fff;
+  background: #1976d2;
+  padding: 5px 10px;
 }
 
 .card p {
   margin-bottom: 5px;
   overflow: hidden;
-  height: 72px;
+  height: 95px;
   position: relative;
+  padding: 2px 10px;
 }
 
 .card p::after {
@@ -40,6 +41,9 @@
   position: absolute;
   right: 3px;
   bottom: 3px;
+  background: #fff;
+  text-align: right;
+  padding: 0 5px;
 }
 
 .card:hover {
@@ -47,5 +51,5 @@
 }
 
 .container {
-  padding: 2px 16px;
+  /* padding: 2px 16px; */
 }

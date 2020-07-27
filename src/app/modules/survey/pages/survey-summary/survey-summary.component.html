@@ -1,0 +1,18 @@
+<section class="card-container card-page">
+  <section
+    class="card"
+    *ngFor="let answer of state.surveyState.answers; index as index"
+  >
+    <section class="question">
+      <h4>Q.{{ index + 1 }}</h4>
+      <p>
+        {{ answer.question.title }}
+      </p>
+    </section>
+
+    <section class="answer">
+      <h4>A.{{ index + 1 }}</h4>
+      <p>{{ parseAnswer(answer) }}</p>
+    </section>
+  </section>
+</section>

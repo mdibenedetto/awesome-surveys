@@ -5,7 +5,7 @@ export interface Option {
 
 export interface Question {
     id: number;
-    type: string;
+    type: QuestionType;
     title: string;
     description: string;
     options: Option[];
@@ -27,6 +27,13 @@ export interface Answer {
     questionAnswer: string | number | [],
     question: Question
 }
+
+export enum QuestionType {
+    FREE_TEXT = "free-text",
+    YES_NO = "yes-no",
+    SINGLE_CHOICE = "single-choice",
+    MULTI_CHOICE = "multi-choice"
+};
 
 export type AnswerValue = string | number | [];
 
