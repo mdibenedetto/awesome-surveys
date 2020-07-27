@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Question, Answer } from 'src/app/core';
+import { Question, Answer, AnswerValue } from 'src/app/core';
 import { AppSurveyStateService } from 'src/app/core/services/survey-state.service';
 
 @Component({
@@ -12,7 +12,7 @@ export class SurveyQuestionComponent {
   @Input() question: Question;
   @Output() saveAnswer: EventEmitter<Answer> = new EventEmitter();
 
-  value: object;
+  value: AnswerValue;
 
   save(e): void {
     e.preventDefault();
@@ -26,7 +26,7 @@ export class SurveyQuestionComponent {
     this.saveAnswer.emit(answer);
   }
 
-  valueChanged(value: object): void {
+  valueChanged(value: AnswerValue): void {
     this.value = value;
   }
 

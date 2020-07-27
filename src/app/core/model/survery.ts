@@ -14,9 +14,9 @@ export interface Question {
 export interface Survey {
     id: number,
     title: string,
+    description: string,
     questions: Question[];
 }
-
 
 export interface SurveyState {
     isCompleted: boolean,
@@ -24,6 +24,9 @@ export interface SurveyState {
 }
 export interface Answer {
     questionId: number,
-    questionAnswer: object,
+    questionAnswer: string | number | [],
     question: Question
 }
+
+export type AnswerValue = string | number | [];
+

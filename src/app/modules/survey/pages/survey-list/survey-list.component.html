@@ -1,0 +1,14 @@
+<section class="card-container card-page">
+  <div *ngFor="let survey of surveyList | async" class="card">
+    <a href="/survey/{{ survey.id }} ">
+      <div class="container">
+        <h4 class="card-title">
+          {{ survey.title }}
+        </h4>
+        <p>
+          {{ survey.description }}
+        </p>
+      </div>
+    </a>
+  </div>
+</section>

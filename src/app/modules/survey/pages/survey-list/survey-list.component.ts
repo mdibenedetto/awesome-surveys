@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SurveyService, Survey } from 'src/app/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-survey-list',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SurveyListComponent implements OnInit {
 
-  constructor() { }
+  surveyList: Observable<Survey[]>;
+
+  constructor(private surveryService: SurveyService) { }
 
   ngOnInit(): void {
+    this.surveyList = this.surveryService.findSurveyList();
   }
 
 }

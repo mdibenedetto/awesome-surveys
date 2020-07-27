@@ -1,0 +1,51 @@
+.card-container {
+  /* display: flex;
+  flex-wrap: wrap; */
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1em;
+  width: 840px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+
+  max-width: 200px;
+  max-height: 100px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.card .card-title {
+  margin-bottom: 5px;
+}
+
+.card p {
+  margin-bottom: 5px;
+  overflow: hidden;
+  height: 72px;
+  position: relative;
+}
+
+.card p::after {
+  content: "...";
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}

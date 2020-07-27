@@ -1,0 +1,4 @@
+.survey-form {
+  display: flex;
+  flex-direction: row-reverse;
+}
