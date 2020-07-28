@@ -7,11 +7,8 @@ import { Observable, of } from 'rxjs';
 })
 export class AuthService {
 
-    constructor() { }
-
     currentUser: User;
     redirectUrl: string;
-
 
     isLoggedIn(): boolean {
         if (this.currentUser) {
@@ -33,7 +30,7 @@ export class AuthService {
 
         if (!userName || !passWord) {
             alert('Please enter your userName and password');
-            return;
+            return null;
         }
 
         this.currentUser = {

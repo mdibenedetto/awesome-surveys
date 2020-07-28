@@ -32,7 +32,6 @@ export class LoginComponent implements AfterViewInit {
   login(loginForm: NgForm) {
 
     if (loginForm && loginForm.valid) {
-
       const { userName, password } = loginForm.form.value;
 
       this.authService.login(userName, password)

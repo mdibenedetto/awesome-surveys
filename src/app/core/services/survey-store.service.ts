@@ -29,7 +29,7 @@ export class AppSurveyStoreService {
     }
 
     completeSurvey(): void {
-        console.log("completeSurvey")
+        console.log("Survey is completed")
         this.surveyState = { ...this.surveyState, isCompleted: true }
     }
 
