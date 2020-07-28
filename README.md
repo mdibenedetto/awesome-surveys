@@ -8,6 +8,28 @@ run the command `npm start`
 
 The application is composed by 2 modules plus the main one.
 
+# Folder _Core_
+
+This folder contains the core entities of the application:
+
+## Folder _Model_
+
+This folder contains:
+
+    1. _Mock-State_ and _Mock-Survey_ used to mock the result of the WEB API which eventually will replace them when is ready
+
+    2. Suvery. It contains all the interface type which represent the Survey
+
+    3. User. It contains the User type interface which represents the user.
+
+## Folder _Services_
+
+This folder contains:
+
+    1. _SurveyService_. It contains the functions which mock the WEB API backed calls
+
+    2. _AppSurveyStoreService_. It contains those functions needed to create and update the state of the application
+
 ## 1. Module _App_
 
 This module is the main one, it is provided by the `ng` tool scaffolder and is the entry point of the application.
