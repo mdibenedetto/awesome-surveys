@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Survey, AppSurveyStateService } from '..';
+import { Survey, AppSurveyStoreService } from '..';
 import { Observable, of } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class SurveyService {
     constructor(
-        private state: AppSurveyStateService,
+        private state: AppSurveyStoreService,
         private httpClient: HttpClient) { }
 
     findSurveyList(): Observable<Survey[]> {

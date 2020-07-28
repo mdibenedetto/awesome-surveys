@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AppSurveyStoreService } from 'src/app/core/services/survey-store.service';
-import { SurveyService, Answer, QuestionType } from 'src/app/core';
+import { SurveyService, Answer, QuestionType, AppSurveyStoreService } from 'src/app/core';
 
 
 @Component({
@@ -10,7 +9,8 @@ import { SurveyService, Answer, QuestionType } from 'src/app/core';
 })
 export class SurveySummaryComponent {
 
-  constructor(public state: AppSurveyStoreService,
+  constructor(
+    public state: AppSurveyStoreService,
     public survey: SurveyService) { }
 
   parseAnswer(answer: Answer): string {

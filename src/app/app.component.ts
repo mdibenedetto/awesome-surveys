@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, Event, NavigationStart, NavigationEnd, NavigationCancel, NavigationError } from '@angular/router';
-import { AppSurveyStateService } from './core';
+import { AppSurveyStoreService } from './core';
 import { AuthService } from './modules/access/services/auth.service';
 
 @Component({
@@ -14,7 +14,7 @@ export class AppComponent {
   loading = true;
 
   constructor(
-    public state: AppSurveyStateService,
+    public state: AppSurveyStoreService,
     public authService: AuthService,
     private router: Router) {
     router.events.subscribe((routerEvent: Event) => {

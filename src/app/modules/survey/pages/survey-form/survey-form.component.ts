@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 
 import {
-  AppSurveyStateService, SurveyService, Survey, Answer
+  AppSurveyStoreService, SurveyService, Survey, Answer
 }
   from 'src/app/core';
 
@@ -19,7 +19,7 @@ export class SurveyFormComponent implements OnInit {
   totalQuestion: number;
 
   constructor(
-    public store: AppSurveyStateService,
+    public store: AppSurveyStoreService,
     private surveyService: SurveyService,
     private route: ActivatedRoute,
     private router: Router

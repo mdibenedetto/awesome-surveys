@@ -7,5 +7,5 @@ import { User } from './model/user';
 export {
     User,
     Survey, Question, Option, Answer, AnswerValue, QuestionType,
-    SurveyService, AppSurveyStoreService as AppSurveyStateService, SurveyState
+    SurveyService, AppSurveyStoreService, SurveyState
 }
