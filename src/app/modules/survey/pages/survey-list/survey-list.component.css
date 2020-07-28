@@ -1,8 +1,19 @@
 .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1.5em;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 780px) {
+  .card-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 .card {

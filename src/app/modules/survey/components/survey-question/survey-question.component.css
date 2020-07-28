@@ -11,6 +11,11 @@
   width: 500px;
 }
 
+.question.is-valid {
+  border-color: #00bb48;
+  border-width: 2px;
+}
+
 .question-header > * {
   padding: var(--padding-container);
 }
@@ -19,6 +24,7 @@
   background-color: #1976d2;
   color: white;
   border-radius: 9px 9px 0 0;
+  font-weight: 300;
 }
 
 .desc {
@@ -35,6 +41,7 @@
 
 .question-body .content {
   width: 100%;
+  font-size: 1.1rem;
 }
 
 .option {

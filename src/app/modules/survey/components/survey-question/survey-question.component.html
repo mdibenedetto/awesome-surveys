@@ -1,4 +1,4 @@
-<section class="question">
+<section class="question" [ngClass]="{ 'is-valid': isValid() }">
   <header class="question-header">
     <h2 class="title">
       {{ question.title }}

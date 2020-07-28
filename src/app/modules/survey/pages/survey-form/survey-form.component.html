@@ -6,13 +6,15 @@
       </h1>
     </header>
 
-    <app-survey-question
-      *ngFor="let question of survey.questions"
-      [question]="question"
-      (saveAnswer)="saveAnswer($event)"
-    ></app-survey-question>
+    <ng-container *ngFor="let question of survey.questions">
+      <app-survey-question
+        [question]="question"
+        (saveAnswer)="saveAnswer($event)"
+      ></app-survey-question>
 
-    <hr />
+      <hr />
+    </ng-container>
+
     <section class="action-button">
       <button
         (click)="completeSurvey($event)"

@@ -13,6 +13,7 @@ export class SurveyQuestionComponent {
   @Output() saveAnswer: EventEmitter<Answer> = new EventEmitter();
 
   value: AnswerValue;
+  isSaved: boolean = false;
 
   save(e): void {
     e.preventDefault();
@@ -24,10 +25,16 @@ export class SurveyQuestionComponent {
     };
 
     this.saveAnswer.emit(answer);
+    this.isSaved = true;
   }
 
   valueChanged(value: AnswerValue): void {
     this.value = value;
+    this.isSaved = false;
+  }
+
+  isValid() {
+    return (!!this.value && this.isSaved);
   }
 
 }

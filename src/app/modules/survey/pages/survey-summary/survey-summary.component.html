@@ -3,14 +3,14 @@
     class="card"
     *ngFor="let answer of state.surveyState.answers; index as index"
   >
-    <section class="question">
+    <section class="question-item">
       <h4>Q.{{ index + 1 }}</h4>
       <p>
         {{ answer.question.title }}
       </p>
     </section>
 
-    <section class="answer">
+    <section class="question-item">
       <h4>A.{{ index + 1 }}</h4>
       <p>{{ parseAnswer(answer) }}</p>
     </section>

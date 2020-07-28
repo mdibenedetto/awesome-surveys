@@ -4,7 +4,7 @@ import { Question } from 'src/app/core';
 @Component({
   selector: 'app-survey-question-free-text',
   template: `<label>
-                <span>{{ question.options[0].label }}</span>
+                <span *ngIf="question.options[0].label">{{ question.options[0].label }}</span>
                 <textarea
                   cols="40" rows="5"
                   placeholder="{{ question.options[0].value }}"
@@ -12,12 +12,20 @@ import { Question } from 'src/app/core';
                 ></textarea>
             </label>
             `,
-  styles: [`textarea {
+  styles: [`
+
+          label span {
+            margin-bottom: 5px;
+            display: inline-block;
+          }
+  
+          textarea {
               resize: none;
               width: 100%;
               box-sizing: border-box;
               padding: 10px;
               border-radius: 5px;
+              border-color: #c5c3c3;
             } `]
 })
 export class FreeTextQuestionComponent {

@@ -19,6 +19,7 @@ import { Question } from 'src/app/core';
     :host {
       display: flex;
       flex-direction: column;
+      gap: 5px;
     }
   `]
 })
