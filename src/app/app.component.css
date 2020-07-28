@@ -32,7 +32,17 @@ p {
   align-items: center;
   background-color: #1976d2;
   color: white;
-  font-weight: 600;
+  /* font-weight: 600; */
+}
+
+.navbar-brand {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
 }
 
 .toolbar img {
@@ -55,4 +65,15 @@ ul.nav {
 
 ul.nav li {
   margin-right: 10px;
+}
+
+.nav-link {
+  padding: 0.5rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-link:hover,
+.active .nav-link {
+  font-weight: bold;
 }

@@ -14,6 +14,9 @@ import {
   SurveyListComponent, SurveyFormComponent,
   SurveySummaryComponent
 } from './pages';
+import { SurveyGuardService } from './guards/survey-guard.service';
+import { AuthService } from '../access/services/auth.service';
+import { AuthGuardService } from './guards/auth-guard.service';
 
 const routes: Routes = [
   {
@@ -26,10 +29,11 @@ const routes: Routes = [
   },
   {
     path: 'summary',
+    canActivate: [SurveyGuardService],
     component: SurveySummaryComponent
   },
   {
-    path: ':id',
+    path: 'view/:id',
     component: SurveyFormComponent
   }
 ];
@@ -50,6 +54,7 @@ const routes: Routes = [
   ],
   exports: [
     RouterModule
-  ]
+  ],
+  // providers: [AuthService, AuthGuardService]
 })
 export class SurveyModule { }
