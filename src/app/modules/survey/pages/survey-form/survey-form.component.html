@@ -12,11 +12,14 @@
       (saveAnswer)="saveAnswer($event)"
     ></app-survey-question>
 
-    <button
-      (click)="completeSurvey($event)"
-      [disabled]="!isSurveryFilled(survey)"
-    >
-      Complete
-    </button>
+    <hr />
+    <section class="action-button">
+      <button
+        (click)="completeSurvey($event)"
+        [disabled]="!isSurveryFilled(survey)"
+      >
+        Complete
+      </button>
+    </section>
   </form>
 </section>

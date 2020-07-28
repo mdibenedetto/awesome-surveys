@@ -4,9 +4,11 @@
 
 .question {
   border: 1px solid;
+  border-color: #b9b5b5;
+  border-radius: 10px 10px 0 0;
   margin: 10px;
   padding-top: 0;
-  width: 400px;
+  width: 500px;
 }
 
 .question-header > * {
@@ -16,6 +18,7 @@
 .title {
   background-color: #1976d2;
   color: white;
+  border-radius: 9px 9px 0 0;
 }
 
 .desc {
@@ -26,10 +29,12 @@
   padding: var(--padding-container);
   min-height: 100px;
   background-color: lightgray;
+  display: flex;
+  align-items: center;
 }
 
-.content {
-  background-color: lightgoldenrodyellow;
+.question-body .content {
+  width: 100%;
 }
 
 .option {
@@ -41,4 +46,14 @@
   padding: var(--padding-container);
   display: flex;
   justify-content: flex-end;
+}
+
+.footer button {
+  width: 80px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.footer button:disabled {
+  cursor: not-allowed;
 }

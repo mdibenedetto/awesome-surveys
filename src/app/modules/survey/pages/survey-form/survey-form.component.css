@@ -2,3 +2,13 @@
   display: flex;
   flex-direction: row-reverse;
 }
+
+.action-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.action-button button {
+  width: 100px;
+  padding: 5px;
+}

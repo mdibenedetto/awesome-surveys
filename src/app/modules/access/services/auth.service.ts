@@ -11,12 +11,21 @@ export class AuthService {
 
     currentUser: User;
     redirectUrl: string;
-    test: string;
+
 
     isLoggedIn(): boolean {
+        if (this.currentUser) {
+            return true;
+        }
+        else {
+            const storedUser = localStorage.getItem("user");
+            if (storedUser) {
+                this.currentUser = JSON.parse(storedUser);
+                return true
+            }
+        }
 
-        console.log(this.test)
-        return !!this.currentUser;
+        return false;
     }
 
     // mock login
@@ -31,12 +40,14 @@ export class AuthService {
             userName: "Test User"
         } as User
 
-        this.test = "hey hey";
+        localStorage.setItem("user", JSON.stringify(this.currentUser));
         return of(this.currentUser);
     }
 
-    logout() {
-        alert("Log out")
+    logout(): Observable<User> {
+        this.currentUser = null
+        localStorage.removeItem("user");
+        return of(this.currentUser);
     }
 
 }

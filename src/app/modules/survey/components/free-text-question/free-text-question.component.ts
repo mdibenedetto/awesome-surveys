@@ -13,10 +13,12 @@ import { Question } from 'src/app/core';
             </label>
             `,
   styles: [`textarea {
-            resize: none;
-            width: 100%;
-            box-sizing: border-box;
-          } `]
+              resize: none;
+              width: 100%;
+              box-sizing: border-box;
+              padding: 10px;
+              border-radius: 5px;
+            } `]
 })
 export class FreeTextQuestionComponent {
 

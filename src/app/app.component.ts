@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, Event, NavigationStart, NavigationEnd, NavigationCancel, NavigationError } from '@angular/router';
 import { AppSurveyStateService } from './core';
+import { AuthService } from './modules/access/services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,10 @@ export class AppComponent {
   title = 'AwesomeSurveys';
   loading = true;
 
-  constructor(public state: AppSurveyStateService, private router: Router) {
+  constructor(
+    public state: AppSurveyStateService,
+    public authService: AuthService,
+    private router: Router) {
     router.events.subscribe((routerEvent: Event) => {
       this.checkRouterEvent(routerEvent);
     });
@@ -28,5 +32,10 @@ export class AppComponent {
       routerEvent instanceof NavigationError) {
       this.loading = false;
     }
+  }
+
+  logOut(): void {
+    this.authService.logout()
+      .subscribe(() => this.router.navigateByUrl('/login'));
   }
 }
