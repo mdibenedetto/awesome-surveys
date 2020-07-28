@@ -67,7 +67,6 @@ describe('LoginComponent', () => {
     button.click();
     fixture.detectChanges();
 
-
     expect(routerSpy.navigate).toHaveBeenCalledWith(['/survey']);
 
     // setTimeout(() => {

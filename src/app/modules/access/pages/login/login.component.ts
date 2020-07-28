@@ -34,7 +34,7 @@ export class LoginComponent implements AfterViewInit {
     if (loginForm && loginForm.valid) {
       const { userName, password } = loginForm.form.value;
 
-      this.authService.login(userName.trim(), password)
+      this.authService.login(userName, password)
         .subscribe(_ => {
           if (this.authService.redirectUrl) {
             this.router.navigateByUrl(this.authService.redirectUrl);
