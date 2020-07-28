@@ -34,7 +34,7 @@ export class AuthService {
         }
 
         this.currentUser = {
-            userName: "Test User"
+            userName: "Demo User"
         } as User
 
         localStorage.setItem("user", JSON.stringify(this.currentUser));

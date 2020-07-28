@@ -28,9 +28,10 @@ p {
   height: 60px;
   display: flex;
   align-items: center;
-  background-color: #1976d2;
+  background: radial-gradient(ellipse at center, #0777d3 0%, #1166ab 100%);
   color: white;
   z-index: 2;
+  padding: 0.5rem 1rem;
 }
 
 .navbar-brand {
@@ -41,6 +42,32 @@ p {
   font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap;
+}
+
+.navbar-brand {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+.brand-text {
+  border: 1px solid;
+  font-family: cursive;
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  background: radial-gradient(ellipse at center, #d73430 0%, #f1625e 100%);
+  display: inline-flex;
+  color: white;
+  box-shadow: 1px 1px 1px #001c35;
+  width: 45px;
+  height: 45px;
+  justify-content: center;
 }
 
 .toolbar img {
@@ -69,10 +96,17 @@ ul.nav li {
   margin-right: 10px;
 }
 
+.toolbar ul li {
+  border-right: 0.5px inset #1166ab;
+  font-family: "Poppins", sans-serif;
+}
+
 .nav-link {
   padding: 0.5rem;
   text-decoration: none;
   color: #fff;
+  padding-right: 3.5rem;
+  padding-left: 3.5rem;
 }
 
 .nav-link:hover,

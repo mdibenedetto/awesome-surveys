@@ -1,12 +1,8 @@
 <span class="fa fa-refresh glyphicon-spin spinner" *ngIf="loading"></span>
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
-  <a href="/">
-    <img
-      width="40"
-      alt="Angular Logo"
-      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
-    />
+  <a href="/" class="navbar-brand">
+    <span class="brand-text">AS</span>
   </a>
 
   <span class="navbar-brand">Awesome Surveys</span>
@@ -21,17 +17,19 @@
     </li>
   </ul>
 
-  <div class="spacer"></div>
-
   <ul class="nav">
     <li *ngIf="!authService.isLoggedIn()" [routerLinkActive]="['active']">
       <a class="nav-link" routerLink="/login">Log in</a>
     </li>
-
     <li *ngIf="authService.isLoggedIn()" [routerLinkActive]="['active']">
       <a class="nav-link" (click)="logOut()">Log out</a>
     </li>
   </ul>
+  <div class="spacer"></div>
+
+  <div *ngIf="authService.isLoggedIn()" [routerLinkActive]="['active']">
+    <span>Welcome << {{ authService.currentUser.userName }} >> </span>
+  </div>
 </div>
 
 <main class="page-container" role="main">

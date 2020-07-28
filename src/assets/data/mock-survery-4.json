@@ -6,8 +6,8 @@
     {
       "id": 1,
       "type": "free-text",
-      "title": "Dummy Title  free-text",
-      "description": "DummyDummy Description free-text",
+      "title": "Demo Question free-text?",
+      "description": "Demo Description free-text",
       "options": [
         {
           "value": "Default Free text option",
@@ -18,8 +18,8 @@
     {
       "id": 2,
       "type": "yes-no",
-      "title": "Dummy Title  yes-no",
-      "description": "Dummy Description yes-no",
+      "title": "Demo Question  yes-no?",
+      "description": "Demo Description yes-no",
       "options": [
         {
           "value": "yes",
@@ -30,8 +30,8 @@
     {
       "id": 3,
       "type": "single-choice",
-      "title": "Dummy Title  single-choice",
-      "description": "Dummy Description single-choice",
+      "title": "Demo Question single-choice?",
+      "description": "Demo Description single-choice",
       "options": [
         {
           "value": "1",
@@ -50,8 +50,8 @@
     {
       "id": 4,
       "type": "multi-choice",
-      "title": "Dummy Title  multi-choice",
-      "description": "Dummy Description multi-choice",
+      "title": "Demo Question multi-choice?",
+      "description": "Demo Description multi-choice",
       "options": [
         {
           "value": "1",

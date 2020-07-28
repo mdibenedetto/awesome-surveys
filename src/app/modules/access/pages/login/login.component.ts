@@ -17,8 +17,8 @@ export class LoginComponent implements AfterViewInit {
 
   pageTitle = 'Log In';
 
-  userName = 'admin';
-  password = 'admin';
+  userName = 'demo';
+  password = 'demo';
 
   constructor(
     private authService: AuthService,
@@ -34,7 +34,7 @@ export class LoginComponent implements AfterViewInit {
     if (loginForm && loginForm.valid) {
       const { userName, password } = loginForm.form.value;
 
-      this.authService.login(userName, password)
+      this.authService.login(userName.trim(), password)
         .subscribe(_ => {
           if (this.authService.redirectUrl) {
             this.router.navigateByUrl(this.authService.redirectUrl);
@@ -43,7 +43,7 @@ export class LoginComponent implements AfterViewInit {
           }
         });
     } else {
-      alert('Please enter a user name and password.');
+      alert('Please enter valid user name and password!');
     }
   }
 }
