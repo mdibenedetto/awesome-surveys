@@ -19,33 +19,34 @@ export class SurveyFormComponent implements OnInit {
   totalQuestion: number;
 
   constructor(
-    public state: AppSurveyStateService,
+    public store: AppSurveyStateService,
     private surveyService: SurveyService,
     private route: ActivatedRoute,
     private router: Router
-  ) { }
+  ) {
+    store.resetState();
+  }
 
   ngOnInit(): void {
     const surveyId: number = this.route.snapshot.params.id;
     this.survey = this.surveyService.findSurvey(surveyId);
   }
 
-
   isSurveryFilled(survey: Survey): boolean {
-    if (this.state.surveyState.answers.length == survey.questions.length) {
+    if (this.store.surveyState.answers.length == survey.questions.length) {
       return true;
     }
     return false;
   }
 
   saveAnswer(answer: Answer): void {
-    this.state.saveAnswer(answer);
+    this.store.saveAnswer(answer);
   }
 
   completeSurvey(event): void {
     event.preventDefault();
 
-    this.state.completeSurvey();
+    this.store.completeSurvey();
     this.surveyService.submitSurvey()
       .subscribe(
         (res) => {

@@ -6,8 +6,6 @@ import { AuthGuardService } from './modules/survey/guards/auth-guard.service';
 
 
 const routes: Routes = [
-  { path: 'welcome', component: WelcomeComponent },
-
   {
     path: 'survey',
     canActivate: [AuthGuardService],

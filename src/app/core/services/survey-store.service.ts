@@ -11,10 +11,15 @@ export class AppSurveyStoreService {
     surveyState: AppSurveyState;
 
     constructor() {
+        this.resetState();
+    }
+
+    resetState() {
         this.surveyState = {
             answers: [] as Answer[]
         } as AppSurveyState;
     }
+
 
     saveAnswer(answer: Answer): void {
         this.surveyState.answers = [
